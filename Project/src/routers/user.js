@@ -99,7 +99,7 @@ router.post('/users/login',async(req,res) => {
         console.log('jdd')
         console.log(req.body.email,req.body.password)
         const user =await User.findByCredentials(req.body.email,req.body.password) 
-        console.log('fjfjf')
+        console.log('fjfjf') 
         const token = await user.generateAuthToken();
         res.send({user,token})
     } catch(e){  
